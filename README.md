@@ -17,7 +17,7 @@ docker run -d \
 Then you can go to http://localhost:8888/ to see if it working.
 To run a hook on specific repo just call http://localhost:8888/hooks/repo-name/master
 
-You need to put the repo config to /conf.d using the exact same name as the repo name shown on url (http://localhost:8888/hooks/<repo>/<branch> will looking for /conf.d/<repo>)
+You need to put the repo config to /conf.d using the exact same name as the repo name shown on url (http://localhost:8888/hooks/repo/branch will looking for /conf.d/repo and /conf.d/repo.pem for ssh identiry file)
 
 ### Example
 
