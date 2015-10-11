@@ -6,6 +6,6 @@ RUN apk update && apk add git openssh-client && \
     pip install hooked waitress && \
     mkdir /data
 
-EXPOSE 80
+EXPOSE 8888
 
 CMD ["hooked", "/server.cfg"]
