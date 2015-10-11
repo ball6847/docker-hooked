@@ -4,7 +4,7 @@ To build the image, just cd to working directory and run this
 docker build -t ball6847/hooked .
 ```
 
-Then run container using the following command, by default hooked run at port 8888 (map your own port if needed)
+Then run the container, use the following command, by default hooked run at port 8888 (map your own port if needed)
 
 ```sh
 docker run -d \
