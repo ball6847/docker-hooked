@@ -57,3 +57,10 @@ else
     su $username -p -c "git -C $path pull origin master"
 fi
 
+# pull submodules if neccessary
+if [[ -f "$path/.gitmodules" ]]; then
+    su $username -p -c "git submodule update --init --recursive"
+fi
+
+
+
