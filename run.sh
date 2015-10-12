@@ -21,7 +21,7 @@ export PKEY=""
 
 if [[ -f /conf.d/${name}.pem ]]; then
     export PKEY="/conf.d/${name}.pem"
-    chmod 644 $PKEY
+    chmod 600 $PKEY
 fi
 
 # ===========================
@@ -49,6 +49,9 @@ if [ $uid -gt 999 -a "$username" == "" ]; then
     username="a${uid}"
     adduser -D -u $uid -s /bin/sh $username
 fi
+
+# make private key accessible by running user
+chown $username:$username $PKEY
 
 # now deploy using clone or pull command
 if [[ ! -d "$path/.git" ]]; then
