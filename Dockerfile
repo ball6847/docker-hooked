@@ -2,10 +2,8 @@ FROM frolvlad/alpine-python2
 
 COPY . /
 
-RUN apk update && apk add git openssh-client && \
-    pip install hooked waitress && \
-    mkdir /data
+RUN pip install hooked waitress
 
 EXPOSE 8888
 
-CMD ["hooked", "/server.cfg"]
+ENTRYPOINT ["hooked", "/server.cfg"]

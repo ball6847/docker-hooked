@@ -1,3 +1,0 @@
-#!/bin/sh
-repository="git@github.com:ball6847/slim-starter.git"
-path="/data/slim-starter"
